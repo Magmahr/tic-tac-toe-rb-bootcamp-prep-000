@@ -53,8 +53,6 @@ def draw?(board)
   else
     return false
   end
-end 
-  end  
 end   
 
 def draw?(board)

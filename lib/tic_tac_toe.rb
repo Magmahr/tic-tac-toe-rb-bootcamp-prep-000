@@ -29,7 +29,7 @@ def input_to_index(user_input)
 end
 
 def move(board, index, current_player = "X")
-  board[index] = current_player
+  board[index -1] = current_player
 end
 
 def position_taken?(board, location)
@@ -37,7 +37,7 @@ def position_taken?(board, location)
 end
 
 def valid_move?(board, index)
-  index.between?(0,8) && !position_taken?(board, index)
+  index.between?(1,9) && !position_taken?(board, index)
 end 
 
 def turn(board)

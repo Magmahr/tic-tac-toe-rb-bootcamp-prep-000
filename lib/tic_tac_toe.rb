@@ -28,6 +28,8 @@ def input_to_index(user_input)
   index = user_input.to_i - 1
 end
 
+index = input_to_index(user_input)
+
 def move(board, index, current_player = "X")
   board[index] = current_player
 end

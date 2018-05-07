@@ -69,7 +69,7 @@ def current_player(board)
   end 
 
 def play(board)
-input= gets
+ input = gets
 end  
 
 def empty_board(board) 

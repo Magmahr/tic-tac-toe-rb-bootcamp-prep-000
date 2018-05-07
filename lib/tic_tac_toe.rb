@@ -40,6 +40,8 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end 
 
+
+
 def empty_board(board) 
   board.all? {|idx| idx == " "} 
 end  

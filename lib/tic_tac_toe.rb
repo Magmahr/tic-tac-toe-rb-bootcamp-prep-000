@@ -68,18 +68,6 @@ def current_player(board)
     return "O"
   end 
 
-def play(board)
-  until over?(board)
-    current_player(board)
-    turn(board)
-  end
-  if won?(board)
-    puts "Congratulations #{winner(board)}!"
-  else draw?(board)
-    puts "Cats Game!"
-  end
-end  
-
 def empty_board(board) 
   board.all? {|idx| idx == " "} 
 end  
@@ -137,3 +125,15 @@ def winner(board)
   end
 end
 end
+
+def play(board)
+  until over?(board)
+    current_player(board)
+    turn(board)
+  end
+  if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  else draw?(board)
+    puts "Cats Game!"
+  end
+end  

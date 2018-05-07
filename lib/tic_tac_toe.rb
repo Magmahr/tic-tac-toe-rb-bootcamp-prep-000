@@ -29,7 +29,7 @@ def position_taken?(board, location)
   board[location] != " " && board[location] != ""
 end
 
-ddef valid_move?(board, index)
+def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 

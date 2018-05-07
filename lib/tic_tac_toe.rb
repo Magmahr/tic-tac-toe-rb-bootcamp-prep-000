@@ -51,6 +51,23 @@ def turn(board)
   display_board(board)
 end
 
+def turn_count(board)
+  count = 0
+  board.each do |place|
+    if place == "X" || place == "O"
+      count += 1
+    end 
+  end 
+  count
+end  
+
+def current_player(board)
+  if turn_count(board) % 2 == 0 
+    return "X"
+  else 
+    return "O"
+  end 
+
 def play(board)
   turn_count = 0
   until turn_count == 9

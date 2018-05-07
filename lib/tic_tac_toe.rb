@@ -69,11 +69,14 @@ def current_player(board)
   end 
 
 def play(board)
-  turn_count = 0
-  until turn_count == 9
+  turn_count = 
+  if won?(board)
+    return winner(board)
+  else  
+    until turn_count == 9
     turn(board)
     turn_count += 1
-  end
+    end
 end  
 
 def empty_board(board) 

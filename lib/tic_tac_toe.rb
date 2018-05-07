@@ -40,7 +40,24 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end 
 
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  if valid_move?(board, input)
+    move(board, input, current_player(board))
+  else
+    turn(board)
+  end
+  display_board(board)
+end
 
+def play(board)
+  turn_count = 0
+  until turn_count == 9
+    turn(board)
+    turn_count += 1
+  end
+end  
 
 def empty_board(board) 
   board.all? {|idx| idx == " "} 
@@ -64,7 +81,6 @@ def won?(board)
   end
   return false
 end 
-
 
 def full?(board)
   board.all? do |position|

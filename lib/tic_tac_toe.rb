@@ -69,7 +69,7 @@ def current_player(board)
   end 
 
 def play(board)
-  turn_count = 
+  turn_count = 0
   if won?(board)
     return winner(board)
   else  

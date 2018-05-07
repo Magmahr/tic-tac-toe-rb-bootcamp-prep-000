@@ -77,6 +77,7 @@ def play(board)
     turn(board)
     turn_count += 1
     end
+  end  
 end  
 
 def empty_board(board) 

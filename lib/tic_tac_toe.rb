@@ -69,15 +69,7 @@ def current_player(board)
   end 
 
 def play(board)
-  until over?(board)
-    current_player(board)
-    turn(board)
-  end
-  if won?(board)
-    puts "Congratulations #{winner(board)}!"
-  else draw?(board)
-    puts "Cats Game!"
-  end
+  input = gets
 end  
 
 def empty_board(board) 

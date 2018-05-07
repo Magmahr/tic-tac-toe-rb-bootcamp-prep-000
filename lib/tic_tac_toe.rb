@@ -69,13 +69,14 @@ def current_player(board)
   end 
 
 def play(board)
-turn_count = 0
-  until turn_count == 9
+ until over?(board)
+    current_player(board)
     turn(board)
-    if won?(board)
-      return winner(board)
-    end
-    turn_count += 1
+  end
+  if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  else
+    puts "Cats Game!"
   end
 end  
 

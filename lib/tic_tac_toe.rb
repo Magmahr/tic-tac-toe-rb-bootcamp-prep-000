@@ -25,11 +25,11 @@ def display_board(board)
 end
 
 def input_to_index(user_input)
-  user_input.to_i - 1
+  index = user_input.to_i - 1
 end
 
 def move(board, index, current_player = "X")
-  board[index-1] = current_player
+  board[index] = current_player
 end
 
 def position_taken?(board, location)

@@ -136,10 +136,10 @@ def play(board)
   until turn_count == 9
     turn(board)
     turn_count += 1
-    if won?(board)
+  end 
+  if won?(board)
       puts "Congratulations! #{winner}"
     else draw?(board)
       puts "It was a draw!"
     end 
-  end  
 end  

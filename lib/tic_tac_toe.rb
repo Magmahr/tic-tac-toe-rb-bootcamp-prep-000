@@ -141,5 +141,4 @@ def play(board)
     else draw?(board)
       puts "It was a draw!"
     end  
-  end
 end  

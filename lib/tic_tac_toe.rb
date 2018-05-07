@@ -42,11 +42,12 @@ def won?(board)
   if draw?(board) 
     return false
   end  
-WIN_COMBINATIONS.each do |array|
+ WIN_COMBINATIONS.each do |array|
     if board[array[0]] == board[array[1]] && board[array[1]] == board[array[2]] && position_taken?(board, array[0])
       return array 
      end  
- 
+  end
+end
 end  
 
 

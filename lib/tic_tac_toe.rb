@@ -152,5 +152,6 @@ def play(board)
       puts "Congratulations! #{winner}"
     else draw?(board)
       puts "It was a draw!"
+    end  
   end
 end  
